@@ -1,0 +1,115 @@
+:root {
+  --primary: #1d9fc7;
+  --bg: #84beec;
+  --sec: #051f27;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--sec);
+  color: #fff;
+  min-height: 5000px;
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px cyan, 0 0 30px cyan,
+      0 0 40px cyan, 0 0 50px cyan, 0 0 60px cyan;
+  }
+  50% {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px cyan, 0 0 16px cyan,
+      0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px cyan, 0 0 30px cyan,
+      0 0 40px cyan, 0 0 50px cyan, 0 0 60px cyan;
+  }
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(29, 159, 199, 0.5);
+  z-index: 9999;
+  padding: 1rem 6%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  border-bottom: 5px solid var(--sec);
+}
+.navbar .navbar-logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* animation: glow 10s linear infinite;
+  -webkit-animation: glow 10s linear infinite; */
+}
+.navbar .navbar-logo span,
+.hero .content .name span {
+  color: var(--bg);
+  animation: glow 10s linear infinite;
+  -webkit-animation: glow 10s linear infinite;
+}
+.navbar .navbar-nav a {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white; /* Ganti warna teks sesuai kebutuhan */
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease; /* Tambahkan animasi untuk efek halus */
+  box-sizing: border-box;
+}
+.navbar .navbar-nav a:hover {
+  background-color: rgba(0, 255, 255, 0.5);
+  padding: 0.5rem 1rem;
+  /*Tetapkonsistendenganukurandefault*/
+  border-radius: 5px;
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,
+    0 0 200px cyan;
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero {
+  justify-content: space-around;
+  padding: 1.4rem 14%;
+}
+.hero .photo img {
+  max-width: 20rem;
+  border-radius: 0px 140px 0px 140px;
+  -webkit-border-radius: 0px 140px 0px 140px;
+  -moz-border-radius: 0px 140px 0px 140px;
+  -ms-border-radius: 0px 140px 0px 140px;
+  -o-border-radius: 0px 140px 0px 140px;
+}
+.hero .content {
+  padding: 1.4rem 7%;
+  width: 100%;
+  text-align: justify;
+
+  /* max-width: 60rem; */
+}
+.hero .content .name {
+  font-size: 4.5rem;
+  /* animation: glow 10s linear infinite;
+  -webkit-animation: glow 10s linear infinite; */
+}
